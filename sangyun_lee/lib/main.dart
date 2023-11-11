@@ -94,7 +94,15 @@ class FurnitureApp extends StatelessWidget {
                       )
                     ],
                   ),
-                  Row(),
+                  const Row(
+                    children: [
+                      Column(
+                        children: [
+                          Text("777"),
+                        ],
+                      )
+                    ],
+                  ),
                 ],
               ),
             ),
