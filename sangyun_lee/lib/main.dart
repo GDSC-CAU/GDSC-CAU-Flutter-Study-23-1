@@ -57,12 +57,15 @@ class FurnitureApp extends StatelessWidget {
                     children: [
                       Padding(
                         padding: const EdgeInsets.all(15.0),
-                        child: Container(
-                          decoration: const BoxDecoration(
-                              color: Colors.white, shape: BoxShape.circle),
-                          width: 75,
-                          height: 75,
-                          child: const Center(child: Text("a")),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(50),
+                          child: const SizedBox(
+                              height: 75,
+                              width: 75,
+                              child: Image(
+                                image: AssetImage("images/woman.jpg"),
+                                fit: BoxFit.fill,
+                              )),
                         ),
                       ),
                       const Padding(
@@ -70,12 +73,25 @@ class FurnitureApp extends StatelessWidget {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Sangyun lee"),
-                            Text("Software Enginneer")
+                            Text(
+                              "Sangyun lee",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 25,
+                                  fontWeight: FontWeight.w600),
+                            ),
+                            Text(
+                              "Software Enginneer",
+                              style: TextStyle(color: Colors.white),
+                            )
                           ],
                         ),
                       ),
-                      IconButton(onPressed: () {}, icon: const Icon(Icons.edit))
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.edit),
+                        color: Colors.white,
+                      )
                     ],
                   ),
                   Row(),
