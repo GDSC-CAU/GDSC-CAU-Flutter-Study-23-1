@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sangyun_lee/widgets/listitem.dart';
 
 void main() {
   runApp(const MyApp());
@@ -81,7 +82,7 @@ class FurnitureApp extends StatelessWidget {
                                   fontWeight: FontWeight.w600),
                             ),
                             Text(
-                              "Software Enginneer",
+                              "Software Engineer",
                               style: TextStyle(color: Colors.white),
                             )
                           ],
@@ -106,7 +107,7 @@ class FurnitureApp extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w600),
+                                  fontWeight: FontWeight.w700),
                             ),
                             Text(
                               "Collect",
@@ -124,7 +125,7 @@ class FurnitureApp extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w600),
+                                  fontWeight: FontWeight.w700),
                             ),
                             Text(
                               "Attention",
@@ -142,7 +143,7 @@ class FurnitureApp extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w600),
+                                  fontWeight: FontWeight.w700),
                             ),
                             Text(
                               "Track",
@@ -160,7 +161,7 @@ class FurnitureApp extends StatelessWidget {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 20,
-                                  fontWeight: FontWeight.w600),
+                                  fontWeight: FontWeight.w700),
                             ),
                             Text(
                               "Coupons",
@@ -241,7 +242,31 @@ class FurnitureApp extends StatelessWidget {
                 ),
               ],
             ),
-          )
+          ),
+          ListItem(
+            title: "Address",
+            description: "Ensure your harvesting address",
+            iconData: Icons.location_on,
+            iconColor: Colors.deepPurpleAccent.shade100,
+          ),
+          ListItem(
+            title: "Privacy",
+            description: "System permission change",
+            iconData: Icons.lock,
+            iconColor: Colors.pinkAccent.shade100,
+          ),
+          const ListItem(
+            title: "General",
+            description: "Basic function settings",
+            iconData: Icons.layers,
+            iconColor: Colors.yellow,
+          ),
+          ListItem(
+            title: "Notification",
+            description: "Take over the news in time",
+            iconData: Icons.notifications,
+            iconColor: Colors.greenAccent.shade100,
+          ),
         ],
       ),
     );
