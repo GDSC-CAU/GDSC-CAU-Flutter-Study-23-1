@@ -178,13 +178,69 @@ class FurnitureApp extends StatelessWidget {
               ),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Container(
-                child: const Icon(Icons.account_balance_wallet),
-              )
-            ],
+          Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade200,
+                      ),
+                      child: const Icon(Icons.account_balance_wallet),
+                    ),
+                    const Text("Wallet"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade200,
+                      ),
+                      child: const Icon(Icons.airport_shuttle_sharp),
+                    ),
+                    const Text("Delivery"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade200,
+                      ),
+                      child: const Icon(Icons.message),
+                    ),
+                    const Text("Message"),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Container(
+                      width: 50,
+                      height: 50,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.grey.shade200,
+                      ),
+                      child: const Icon(Icons.attach_money_sharp),
+                    ),
+                    const Text("Service"),
+                  ],
+                ),
+              ],
+            ),
           )
         ],
       ),
