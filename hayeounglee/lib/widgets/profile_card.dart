@@ -15,15 +15,38 @@ class ProfileCard extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              Icon(Icons.person),
+              Icon(Icons.person, size: 70, color: Colors.white),
               SizedBox(
                 width: 10,
               ),
               Column(
-                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Hayoung', style: TextStyle(fontSize: 20)),
-                  Text('A person')
+                  Row(
+                    children: [
+                      Text(
+                        'Hayeoung Lee',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
+                      Icon(
+                        Icons.border_color,
+                        color: Colors.white,
+                        size: 20,
+                      )
+                    ],
+                  ),
+                  Text(
+                    'A person',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  )
                 ],
               )
             ],
@@ -32,19 +55,75 @@ class ProfileCard extends StatelessWidget {
             height: 20,
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
-                children: [Text('846'), Text('Collect')],
+                children: [
+                  Text(
+                    '846',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Collect',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  )
+                ],
               ),
               Column(
-                children: [Text('51'), Text('Attention')],
+                children: [
+                  Text(
+                    '51',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Attention',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  )
+                ],
               ),
               Column(
-                children: [Text('267'), Text('Track')],
+                children: [
+                  Text(
+                    '267',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Track',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  )
+                ],
               ),
               Column(
-                children: [Text('39'), Text('Coupons')],
+                children: [
+                  Text(
+                    '39',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    'Coupons',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  )
+                ],
               ),
             ],
           )

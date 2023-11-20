@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/widgets/info_card.dart';
+import 'package:furniture_app/widgets/meun_card.dart';
 import 'package:furniture_app/widgets/profile_card.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: 20,
+            horizontal: 40,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -23,22 +24,31 @@ class HomeScreen extends StatelessWidget {
               Text(
                 'Center',
                 style: TextStyle(
-                  color: Colors.black,
-                  fontSize: 38,
-                ),
+                    color: Colors.black,
+                    fontSize: 38,
+                    fontWeight: FontWeight.bold),
               ),
               SizedBox(
                 height: 10,
               ),
               ProfileCard(),
               SizedBox(
-                height: 10,
+                height: 15,
               ),
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [],
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  MenuCard(name: 'Wallet', icon: Icons.account_balance_wallet),
+                  MenuCard(name: 'Delivery', icon: Icons.local_shipping),
+                  MenuCard(name: 'Message', icon: Icons.message),
+                  MenuCard(name: 'Service', icon: Icons.money)
+                ],
+              ),
+              SizedBox(
+                height: 15,
               ),
               InfoCard(
+                  color: Colors.purple,
                   icon: Icons.location_on,
                   name: 'Address',
                   hint: 'Ensure your harvesting address'),
@@ -46,6 +56,7 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               InfoCard(
+                  color: Colors.red,
                   icon: Icons.lock,
                   name: 'Privacy',
                   hint: 'System permission change'),
@@ -53,6 +64,7 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               InfoCard(
+                  color: Colors.yellow,
                   icon: Icons.layers,
                   name: 'Gerneral',
                   hint: 'EBasic functional settings'),
@@ -60,6 +72,7 @@ class HomeScreen extends StatelessWidget {
                 height: 20,
               ),
               InfoCard(
+                  color: Colors.lightGreen,
                   icon: Icons.notifications,
                   name: 'Notification',
                   hint: 'Take over the news'),
