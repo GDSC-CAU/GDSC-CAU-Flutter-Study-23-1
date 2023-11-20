@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:furniture_app/widgets/info_card.dart';
+import 'package:furniture_app/widgets/profile_card.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -27,21 +28,41 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 20,
+                height: 10,
               ),
-              InfoCard(name: 'Address', hint: 'Ensure your harvesting address'),
+              ProfileCard(),
+              SizedBox(
+                height: 10,
+              ),
+              Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [],
+              ),
+              InfoCard(
+                  icon: Icons.location_on,
+                  name: 'Address',
+                  hint: 'Ensure your harvesting address'),
               SizedBox(
                 height: 20,
               ),
-              InfoCard(name: 'Privacy', hint: 'System permission change'),
+              InfoCard(
+                  icon: Icons.lock,
+                  name: 'Privacy',
+                  hint: 'System permission change'),
               SizedBox(
                 height: 20,
               ),
-              InfoCard(name: 'Gerneral', hint: 'EBasic functional settings'),
+              InfoCard(
+                  icon: Icons.layers,
+                  name: 'Gerneral',
+                  hint: 'EBasic functional settings'),
               SizedBox(
                 height: 20,
               ),
-              InfoCard(name: 'Notification', hint: 'Take over the news'),
+              InfoCard(
+                  icon: Icons.notifications,
+                  name: 'Notification',
+                  hint: 'Take over the news'),
             ],
           ),
         ),
