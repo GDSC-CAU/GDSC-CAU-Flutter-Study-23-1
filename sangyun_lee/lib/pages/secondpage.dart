@@ -79,6 +79,46 @@ class SecondPage extends StatelessWidget {
               )
             ],
           ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: SizedBox(
+              height: 500,
+              child: Row(
+                children: [
+                  Stack(
+                    clipBehavior: Clip.none,
+                    children: [
+                      Container(
+                        height: 300,
+                        width: 200,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        child: Text("hello"),
+                      ),
+                      Positioned(
+                        top: 280,
+                        child: Container(
+                          width: 150,
+                          height: 100,
+                          decoration: BoxDecoration(
+                            color: Colors.red,
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                          child: const Column(
+                            children: [
+                              Text("hello"),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
         ],
       ),
     );
