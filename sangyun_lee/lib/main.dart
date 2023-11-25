@@ -23,20 +23,36 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class FurnitureApp extends StatelessWidget {
+class FurnitureApp extends StatefulWidget {
   const FurnitureApp({super.key});
+
+  @override
+  State<FurnitureApp> createState() => _FurnitureAppState();
+}
+
+class _FurnitureAppState extends State<FurnitureApp> {
+  String title = "Center";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text(
-          "Center",
-          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+        title: Text(
+          title,
+          style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
         ),
         centerTitle: false,
       ),
       body: PageView(
+        onPageChanged: (int index) {
+          setState(() {
+            if (index == 0) {
+              title = "Center";
+            } else {
+              title = "Furniture";
+            }
+          });
+        },
         children: const [
           FirstPage(),
           SecondPage(),
