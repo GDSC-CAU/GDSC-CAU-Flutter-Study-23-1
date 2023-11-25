@@ -41,6 +41,12 @@ class _FurnitureAppState extends State<FurnitureApp> {
           title,
           style: const TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
         ),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.all(8.0),
+            child: Icon(Icons.shopping_cart_checkout_rounded),
+          )
+        ],
         centerTitle: false,
       ),
       body: PageView(
